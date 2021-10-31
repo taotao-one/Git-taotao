@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .filter-box{
+            margin-top:10px;
+            margin-left:15%;
+        }
+        .filter-box li{
+
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+
+        }
+        .pager-box li{
+            list-style: none;
+            float: left;
+            margin-right: 30px;
+            margin-top: 15px;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 20px;
+        }
+        .pager-box{
+            margin-left:15%;
+            font-size: 0;
+        }
+        .pager-box input{
+            width: 50px;
+            text-align: center;
+        }
+        #impl{
+            margin-bottom: 10px;
+            margin-left: 600px;
+        }
+        #tableBody tr a{
+            margin-right: 10px;
+        }
+        #tit th a{
+            margin-right: 10px;
+        }
+    </style>
+
+    <script src="js/jquery.min.js"></script>
+    <script th:src="@{js/recordRed.js}">
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<h2 align="center">临时导入记录列表</h2>
+<ul class="filter-box">
+    <li><input id="name" placeholder="产品名" class="form-control"></li>
+    <li>
+        <button id="queryBtn" class="btn btn-info">查询</button>
+    </li>
+    <li>
+        <button id="clearBtn" class="btn btn-info">清空查询</button>
+    </li>
+    <li>
+        <button id="now" class="btn btn-info">今日</button>
+    </li>
+    <li>
+        <button id="old" class="btn btn-info">昨日</button>
+    </li>
+    <li>
+        <button id="impl" class="btn btn-info">导入信息</button>
+    </li>
+    <li>
+        <input type="button" id="downBtn" value="结果下载"  class="btn btn-warning"/>
+    </li>
+</ul>
+
+<table align="center" width="70%" border="4" class="table table-bordered">
+    <thead align="center">
+    <tr id="tit">
+        <th><input type="checkbox" id="box" class="ion-android-checkbox-blank"></th>
+        <th>id</th>
+        <th>货号</th>
+        <th>编码</th>
+        <th>商品名称</th>
+        <th>条形码</th>
+        <th>数量</th>
+        <th>导入时间</th>
+        <th><a id="saves" class="btn btn-success">保存</a><a id="dlts" class="btn btn-danger">删除</a></th>
+    </tr>
+    </thead>
+    <tbody align="center" id="tableBody">
+
+    </tbody>
+</table>
+
+<ul class="pager-box">
+    <li>共<span id="max">10</span>页</li>
+    <li>跳转至<input id="page" value="1" >页</li>
+    <li>显示<input id="rows" value="200" >条记录</li>
+    <li><a id="firstBtn" href="#" class="btn btn-info">首页</a></li>
+    <li><a id="prevBtn" href="#" class="btn btn-info">上一页</a></li>
+    <li><a id="nextBtn" href="#" class="btn btn-info">下一页</a></li>
+    <li><a id="endBtn" href="#" class="btn btn-info">末页</a></li>
+    <li><input id="flag" type="hidden" value="0"></li>
+</ul>
+</body>
+</html>

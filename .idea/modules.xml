@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Git-taotao.iml" filepath="$PROJECT_DIR$/.idea/Git-taotao.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.zhutao.demo/com.zhutao.demo.iml" filepath="$PROJECT_DIR$/com.zhutao.demo/com.zhutao.demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-zhutao-mybatis-one/spring-boot-zhutao-mybatis-one.iml" filepath="$PROJECT_DIR$/spring-boot-zhutao-mybatis-one/spring-boot-zhutao-mybatis-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-zhutao-mybatis-two/spring-boot-zhutao-mybatis-two.iml" filepath="$PROJECT_DIR$/spring-boot-zhutao-mybatis-two/spring-boot-zhutao-mybatis-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhutao/zhutao.iml" filepath="$PROJECT_DIR$/zhutao/zhutao.iml" />
     </modules>
   </component>
 </project>

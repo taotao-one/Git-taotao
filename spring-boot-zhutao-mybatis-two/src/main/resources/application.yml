@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+
+spring:
+ datasource:
+  username: user
+  password: zhutao2713
+  url: jdbc:mysql://rm-bp1095tso1hk1047k1o.mysql.rds.aliyuncs.com:3306/warehouse
+
+mybatis:
+  mapper-locations: classpath*:/mybatis/mapper/*.xml
+  type-aliases-package: com.zhutao.bean
+#  configuration:
+#   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

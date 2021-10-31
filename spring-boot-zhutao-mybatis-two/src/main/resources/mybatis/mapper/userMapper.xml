@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhutao.mapper.UserMapper">
+    <select id="getAll" resultType="com.zhutao.bean.UserBean">
+        select id,name,realName,password,nowTime,flag from user
+    </select>
+    <insert id="inserOne">
+        insert into user values(#{id},#{name},#{password})
+    </insert>
+    <select id="getOne" resultType="com.zhutao.bean.UserBean">
+        select id,name,realName,password,nowTime,flag from user where name=#{name}
+    </select>
+    <select id="getConcat" resultType="int">
+        select count(*) from user
+    </select>
+</mapper>

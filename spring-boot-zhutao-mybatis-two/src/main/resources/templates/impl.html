@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>wenjian</title>
+    <style>
+        .import-box{
+            width:400px;
+            border:2px solid #000;
+            background: #cfc;
+            border-radius: 10px;
+            margin:50px auto ;
+        }
+
+        .import-box tr{
+            height:40px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script th:src="@{js/impl.js}"></script>
+
+</head>
+<body>
+<div class="import-box">
+    <h2 align="center">用户导入</h2>
+    <form id="usersForm" action="/hello">
+        <table align="center">
+            <tr>
+                <td>选择文件：</td>
+                <td>
+                    <input type="file" name="excel" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="saveBtn" value="保存">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

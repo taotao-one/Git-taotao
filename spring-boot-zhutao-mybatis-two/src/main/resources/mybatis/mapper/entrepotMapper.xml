@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhutao.mapper.EntrepotMapper">
+
+    <select id="getAll" resultType="com.zhutao.bean.EntrepotBean">
+        select id,name,artNo,quantity,runTime,flag from entrepot
+    </select>
+    <select id="total" resultType="Integer" >
+        select count(*) from entrepot where flag=0
+        <choose>
+            <when test="name != null">
+                and ( name like concat('%',#{name},'%') or artNo like concat('%',#{name},'%') )
+            </when>
+        </choose>
+    </select>
+
+
+    <select id="find" resultType="com.zhutao.bean.EntrepotBean">
+        select id,name,artNo,quantity,runTime,flag from entrepot where flag = 0
+        <choose>
+            <when test="name != null">
+                and ( name like concat('%',#{name},'%') or artNo like concat('%',#{name},'%') )
+            </when>
+        </choose>
+        limit #{start} , #{rows}
+    </select>
+
+</mapper>
